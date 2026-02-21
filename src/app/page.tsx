@@ -7,17 +7,24 @@ import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
 import CalBooking from "@/components/CalBooking";
 import Footer from "@/components/Footer";
+import { getServices, getProjects, getFaqs } from "../../sanity/lib/queries";
 
-export default function Home() {
+export default async function Home() {
+  const [services, projects, faqs] = await Promise.all([
+    getServices(),
+    getProjects(),
+    getFaqs(),
+  ]);
+
   return (
     <main className="min-h-screen bg-luxury-black text-white selection:bg-luxury-gold selection:text-black">
       <Navigation />
       <Hero />
       <BeforeAfter />
-      <Services />
+      <Services sanityServices={services} />
       <PricingApproach />
-      <Gallery />
-      <FAQ />
+      <Gallery sanityProjects={projects} />
+      <FAQ sanityFaqs={faqs} />
       <CalBooking />
       <Footer />
     </main>

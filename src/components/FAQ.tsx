@@ -5,14 +5,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
-export default function FAQ() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
-    const { t } = useLanguage();
+type SanityFaq = {
+    _id: string;
+    questionRu: string;
+    questionHe: string;
+    answerRu: string;
+    answerHe: string;
+    order?: number;
+};
 
-    const faqs = [0, 1, 2, 3].map(i => ({
-        question: t(`faq.items.${i}.q`),
-        answer: t(`faq.items.${i}.a`)
-    }));
+export default function FAQ({ sanityFaqs }: { sanityFaqs?: SanityFaq[] }) {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const { t, language } = useLanguage();
+
+    const faqs = sanityFaqs && sanityFaqs.length > 0
+        ? sanityFaqs.map(f => ({
+            question: language === "he" ? f.questionHe : f.questionRu,
+            answer: language === "he" ? f.answerHe : f.answerRu,
+        }))
+        : [0, 1, 2, 3].map(i => ({
+            question: t(`faq.items.${i}.q`),
+            answer: t(`faq.items.${i}.a`),
+        }));
 
     return (
         <section id="faq" className="py-24 bg-luxury-charcoal">
@@ -23,10 +37,7 @@ export default function FAQ() {
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            className="border-b border-white/10 overflow-hidden"
-                        >
+                        <div key={index} className="border-b border-white/10 overflow-hidden">
                             <button
                                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                                 className="w-full py-6 flex items-center justify-between text-left group"
@@ -49,9 +60,7 @@ export default function FAQ() {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <p className="pb-6 text-gray-400 leading-relaxed">
-                                            {faq.answer}
-                                        </p>
+                                        <p className="pb-6 text-gray-400 leading-relaxed">{faq.answer}</p>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
