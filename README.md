@@ -1,11 +1,11 @@
-# Imperium Construction - Premium Website Demo
+# BuildArt Construction - Premium Website Demo
 
-A premium, luxurious construction company website demo built with Next.js, featuring "Dark Luxury" aesthetics and bilingual support.
+A premium, modern construction company website demo built with Next.js, featuring "Bright Glassmorphism" aesthetics and bilingual support.
 
 ## Features
 
 - **Bilingual Support**: Full Russian/Hebrew localization with RTL layout support
-- **Dark Luxury Theme**: Premium graphite/gold color scheme with smooth animations
+- **Bright Glassmorphism Theme**: Clean white/light gray color scheme with teal accents and soft shadows
 - **Interactive Before/After Slider**: Touch-friendly comparison slider for project showcases
 - **Cal.com Integration**: Direct booking system for consultations
 - **Smooth Navigation**: Scroll-to-section navigation with mobile-friendly menu
