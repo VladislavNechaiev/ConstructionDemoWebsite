@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
@@ -35,10 +35,10 @@ export default function Gallery({ sanityProjects }: { sanityProjects?: SanityPro
         }));
 
     return (
-        <section id="gallery" className="py-24 bg-luxury-black">
+        <section id="gallery" className="py-24 bg-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-12 text-center">
-                    {t("gallery.title")} <span className="text-luxury-gold">{t("gallery.title_highlight")}</span>
+                <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-12 text-center">
+                    {t("gallery.title")} <span className="text-teal-600">{t("gallery.title_highlight")}</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,7 +57,7 @@ export default function Gallery({ sanityProjects }: { sanityProjects?: SanityPro
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <span className="text-luxury-gold border border-luxury-gold px-6 py-2 rounded-full font-mono uppercase tracking-widest text-sm">
+                                <span className="text-teal-600 border border-teal-500 px-6 py-2 rounded-full font-mono uppercase tracking-widest text-sm">
                                     {t("gallery.view")}
                                 </span>
                             </div>
@@ -68,3 +68,4 @@ export default function Gallery({ sanityProjects }: { sanityProjects?: SanityPro
         </section>
     );
 }
+

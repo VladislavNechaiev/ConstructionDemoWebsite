@@ -1,7 +1,7 @@
 export const translations = {
     ru: {
         brand: {
-            name: "IMPERIUM",
+            name: "BUILDART",
             sub: "CONSTRUCTION",
         },
         nav: {
@@ -71,13 +71,13 @@ export const translations = {
             cta: "Заказать Звонок",
         },
         footer: {
-            desc: "Профессиональный ремонт и отделка квартир в Израиле. Imperium Construction - символ качества.",
-            rights: "Imperium Construction. Все права защищены."
+            desc: "Профессиональный ремонт и отделка квартир в Израиле. BuildArt Construction - символ качества.",
+            rights: "BuildArt Construction. Все права защищены."
         }
     },
     he: {
         brand: {
-            name: "IMPERIUM",
+            name: "BUILDART",
             sub: "CONSTRUCTION",
         },
         nav: {
@@ -147,8 +147,8 @@ export const translations = {
             cta: "הזמן שיחה",
         },
         footer: {
-            desc: "שיפוץ וגמר מקצועי בישראל. Imperium Construction - סמל לאיכות.",
-            rights: "Imperium Construction. כל הזכויות שמורות."
+            desc: "שיפוץ וגמר מקצועי בישראל. BuildArt Construction - סמל לאיכות.",
+            rights: "BuildArt Construction. כל הזכויות שמורות."
         }
     }
 };

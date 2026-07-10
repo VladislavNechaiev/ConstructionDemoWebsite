@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ export default function BeforeAfter() {
     const { t } = useLanguage();
 
     return (
-        <section id="before-after" className="py-24 bg-luxury-black text-luxury-light">
+        <section id="before-after" className="py-24 bg-white text-slate-600">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -16,10 +16,10 @@ export default function BeforeAfter() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-luxury-gold">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-teal-600">
                         {t("beforeAfter.title")}
                     </h2>
-                    <p className="text-gray-400 max-w-xl mx-auto">
+                    <p className="text-slate-500 max-w-xl mx-auto">
                         {t("beforeAfter.subtitle")}
                     </p>
                 </motion.div>
@@ -29,7 +29,7 @@ export default function BeforeAfter() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-luxury-charcoal"
+                    className="max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-200"
                 >
                     <ReactCompareSlider
                         itemOne={
@@ -46,8 +46,8 @@ export default function BeforeAfter() {
                         }
                         style={{ height: '600px', width: '100%' }}
                         handle={
-                            <div className="w-10 h-10 bg-luxury-gold rounded-full flex items-center justify-center shadow-lg border-2 border-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-20 cursor-ew-resize">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-luxury-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div className="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-20 cursor-ew-resize">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
                                 </svg>
                             </div>
@@ -63,3 +63,4 @@ export default function BeforeAfter() {
         </section>
     );
 }
+

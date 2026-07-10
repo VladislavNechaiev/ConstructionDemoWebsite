@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import { getCalApi } from "@calcom/embed-react";
@@ -15,14 +15,14 @@ export default function CalBooking() {
     }, []);
 
     return (
-        <section id="booking" className="py-24 bg-luxury-black bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        <section id="booking" className="py-24 bg-white bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
             <div className="container mx-auto px-4">
-                <div className="max-w-5xl mx-auto bg-luxury-charcoal p-8 md:p-12 rounded-3xl border border-luxury-gold/30 shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+                <div className="max-w-5xl mx-auto bg-slate-50 p-8 md:p-12 rounded-3xl border border-teal-500/30 shadow-xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4">
                             {t("contact.title")}
                         </h2>
-                        <p className="text-gray-400">
+                        <p className="text-slate-500">
                             {t("contact.subtitle")}
                         </p>
                     </div>
@@ -40,3 +40,4 @@ export default function CalBooking() {
         </section>
     );
 }
+

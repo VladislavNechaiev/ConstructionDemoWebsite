@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -29,7 +29,7 @@ type SanityService = {
 };
 
 const fallbackClassNames = [
-    "md:col-span-2 md:row-span-2 bg-luxury-charcoal",
+    "md:col-span-2 md:row-span-2 bg-slate-50",
     "md:col-span-1 bg-neutral-900",
     "md:col-span-1 bg-neutral-900",
     "md:col-span-1 bg-neutral-900",
@@ -64,11 +64,11 @@ export default function Services({ sanityServices }: { sanityServices?: SanitySe
         }));
 
     return (
-        <section id="services" className="py-24 bg-luxury-black text-luxury-light">
+        <section id="services" className="py-24 bg-white text-slate-600">
             <div className="container mx-auto px-4">
                 <div className="mb-16 text-center">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-luxury-gold mb-4">{t("services.title")}</h2>
-                    <p className="text-gray-400">{t("services.subtitle")}</p>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-teal-600 mb-4">{t("services.title")}</h2>
+                    <p className="text-slate-500">{t("services.subtitle")}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
@@ -82,14 +82,14 @@ export default function Services({ sanityServices }: { sanityServices?: SanitySe
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(212, 175, 55, 0.1)" }}
-                                className={`p-6 rounded-2xl border border-white/5 flex flex-col justify-between hover:border-luxury-gold/30 transition-all duration-300 ${service.className}`}
+                                className={`p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-teal-500/30 transition-all duration-300 ${service.className}`}
                             >
                                 <div className="mb-4">
-                                    <IconComponent className="w-8 h-8 text-luxury-gold" />
+                                    <IconComponent className="w-8 h-8 text-teal-600" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
-                                    <p className="text-sm text-gray-400 leading-snug">{service.description}</p>
+                                    <h3 className="text-xl font-bold mb-2 text-slate-900">{service.title}</h3>
+                                    <p className="text-sm text-slate-500 leading-snug">{service.description}</p>
                                 </div>
                             </motion.div>
                         );
@@ -99,3 +99,4 @@ export default function Services({ sanityServices }: { sanityServices?: SanitySe
         </section>
     );
 }
+
