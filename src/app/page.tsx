@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+﻿import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import BeforeAfter from "@/components/BeforeAfter";
 import Services from "@/components/Services";
@@ -17,7 +17,7 @@ export default async function Home() {
   ]);
 
   return (
-    <main className="min-h-screen bg-luxury-black text-white selection:bg-luxury-gold selection:text-black">
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-teal-600 selection:text-black">
       <Navigation />
       <Hero />
       <BeforeAfter />
@@ -30,3 +30,4 @@ export default async function Home() {
     </main>
   );
 }
+

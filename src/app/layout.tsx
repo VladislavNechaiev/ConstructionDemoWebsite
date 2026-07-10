@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "IMPERIUM CONSTRUCTION | Элитный Ремонт",
+  title: "BUILDART CONSTRUCTION | Элитный Ремонт",
   description: "Ремонт квартир под ключ в Хайфе, Крайот и Нешере.",
 };
 
@@ -33,7 +33,7 @@ export default function RootLayout({
         className={clsx(
           inter.variable,
           playfair.variable,
-          "antialiased bg-luxury-black text-luxury-light font-sans"
+          "antialiased bg-white text-slate-600 font-sans"
         )}
       >
         <LanguageProvider>
@@ -43,3 +43,4 @@ export default function RootLayout({
     </html>
   );
 }
+
